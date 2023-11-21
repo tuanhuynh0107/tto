@@ -3,6 +3,9 @@
     --primary--color: #6E5CF8;
     --primary--font: #10151d;
     --primary--color-study: #59F74A;
+    --primary--color-font-title-course: #fff;
+
+
 }
 
 .gap-2-5 {
@@ -45,7 +48,7 @@ body {
 
 .btn__login {
     background: #fff;
-    color: #000;
+    color: var(--primary--font);
     border: none;
 }
 
@@ -169,4 +172,320 @@ body {
 
 .btn__change:hover {
     filter: drop-shadow(3px 7px 4px rgba(0, 0, 0, 0.21));
+}
+
+.course-box {
+    padding: 1px 6.75px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+
+/* cards */
+.title__course {
+    color: var(--primary--font);
+    font-size: 1.875rem;
+    font-weight: 600;
+}
+
+.cards {
+    padding: 0px 27px 0px 0px;
+}
+
+.card {
+    position: relative;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: -1px 4px 4px 0px rgba(221, 221, 221, 0.25);
+}
+
+.card:hover .card::before {
+    opacity: 1;
+}
+
+.card::before {
+    content: "Khóa học đang được phát triển";
+    position: absolute;
+    display: inline-block;
+    color: var(--primary--color-font-title-course);
+    background: #ccc;
+    font-size: .875rem;
+    padding: 6px;
+    border-radius: 12px;
+    top: 50%;
+    left: 20px;
+    opacity: 0;
+    z-index: 100000;
+    transition: opacity 1ms;
+}
+
+.card_title {
+    color: var(--primary--color-font-title-course);
+    font-size: 1.125rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: normal;
+    padding: 2px 0px;
+    border-radius: 8px;
+    background: linear-gradient(116deg, #F7904A 33.56%, rgba(248, 158, 97, 0.85) 68.84%, #F7904A 68.85%, rgba(247, 144, 74, 0.53) 90.03%);
+}
+
+.card__link {
+    color: var(--primary--font);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.card__text {
+    color: var(--primary--font);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.card__img {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -19px;
+}
+
+.card__img--thumb {
+    object-fit: cover;
+}
+
+.card__img--desc {
+    color: rgba(221, 221, 221, 0.50);
+    text-shadow: 2px 4px 4px rgba(221, 221, 221, 0.25);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.card__user--qty {
+    display: inline-block;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+    color: #E1E1E1;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+
+/* carefully */
+
+
+.carefully {
+    position: relative;
+    margin: 99px auto 0px;
+    padding: 0px;
+}
+
+.Carefully_img {
+    position: absolute;
+    top: 35%;
+    right: 25%;
+    z-index: -1000;
+}
+
+.carefully__title {
+    margin-top: 54px;
+    position: relative;
+    color: #54C4E3;
+    font-size: 1.875rem;
+    font-weight: 600;
+}
+
+.carefully__title::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background: #54C4E3;
+    box-shadow: 0px 7px 11px 0px #E5E1FE;
+    rotate: 58deg;
+    left: 25%;
+    top: 8px;
+}
+
+.carefully__title::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background: #54C4E3;
+    box-shadow: 0px 7px 11px 0px #E5E1FE;
+    rotate: -58deg;
+    right: 25%;
+    top: 8px;
+}
+
+.carefully__desc {
+    color: var(--primary--font);
+    font-size: 1.875rem;
+    font-weight: 500;
+    margin-top: 44px;
+}
+
+
+.carefully_course {
+    position: relative;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* carefully__teacher */
+
+.carefully__teacher {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: -57px;
+    top: -25px;
+}
+
+.carefully__teacher__img {
+    position: relative;
+}
+
+.carefully__img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.carefully__img--icon {
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+}
+
+.carefully__teacher--name {
+    padding: 13px 27px;
+    color: var(--primary--color-font-title-course);
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 0px 12px 12px 0px;
+    background: #6E5CF8;
+    margin-left: -22px;
+    margin-bottom: 32px;
+}
+
+.carefully__teacher--name__mos {
+    background: #129A05;
+}
+
+/* carefully__course--content  */
+
+.carefully__course--content {
+    padding: 63px 38px 33px 55px;
+    width: 100%;
+}
+
+.carefully__course--name {
+    color: #6E5CF8;
+    margin-bottom: 6px;
+    font-size: .875rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.carefully__course--desc {
+    text-align: left;
+}
+
+.carefully__btn {
+    position: absolute;
+    border: none;
+    background-color: #fff;
+    bottom: 7px;
+    right: 11px;
+}
+
+
+/* features */
+.features {
+    position: relative;
+}
+
+.features_img {
+    position: absolute;
+    left: 7%;
+    top: 0;
+}
+
+.features__title {
+    color: var(--primary--font);
+    font-size: 1.875rem;
+    font-weight: 600;
+}
+
+.features__desc {
+    color: var(--primary--font);
+    margin-top: 41px;
+    font-size: 1.875rem;
+    font-weight: 400;
+}
+
+.features__content {
+    width: 624px;
+    margin-top: 41px;
+    color: var(--primary--font);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* feedback */
+
+
+.feedback {
+    position: relative;
+}
+
+
+.feedback__title {
+    color: var(--primary--font);
+    font-size: 1.875rem;
+    font-weight: 600;
+}
+
+.feedback__desc {
+    margin-top: 13px;
+    color: var(--primary--font);
+    font-size: 1.875rem;
+    font-weight: 400;
+}
+
+.feadback__card--box {
+    margin-top: 56px;
+}
+
+.feedback__cards {
+    padding: 0px 35px;
+}
+
+.feedback__card {
+    background-color: none;
+}
+
+.feadback__img {
+    border-radius: 12px 12px 0px 0px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.feedback__card--body {
+    text-align: left;
+}
+
+.feedback__body--link {
+    color: var(--primary--font);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
 }
